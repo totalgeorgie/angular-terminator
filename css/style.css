@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+.clearfix:after { 
+   content: " ";
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+body {
+  font-family: Helvetica;
+  font-size: 14px;
+  color: #484949;
+  line-height: 18px;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 24px;
+  color: #1A9DBA;
+  padding: 2px;
+  margin: 50px 10px 50px 20px;
+  width: 80%;
+  border-bottom: 1px solid lightgrey;
+}
+
+h2 {
+  margin: 0;
+  font-size: 14px;
+  color: #484949;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+#sidebar {
+  height: 100%;
+  width: 33%;
+  float: left;
+  background-color: #FAFAFA;
+  box-shadow: inset -7px 0 9px -7px #000000;
+}
+
+#topbar {
+  height: 40px;
+  background: -webkit-linear-gradient(top, #666666, #222222);
+}
+
+#main {
+  width: 66%;
+  float: left;
+}
+
+#movies li {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+
+#movies img {
+  height: 122px;
+  width: 122px;
+  border-radius: 61px;
+  margin: 20px;
+}
+
+#blurb img {
+  float: left;
+  margin: 0px 22px 0px 22px;
+  height: 262px;
+  width: 174px;
+}
+
+#blurb h2 {
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px 0px 5px 0px;
+}
+
+#stars {
+  float: left;
+  width: 50%;
+}
+
+#stars li {
+  margin: 10px 0px 10px 0px;
+}
+
+#stars img {
+  height: 66px;
+  width: 66px;
+  border-radius: 30px;
+  float: left;
+}
+
+.profile-shot {
+  height: 420px;
+  width: 347px;
+}
+
+.focused h2, .focused p {
+  color: #1A9DBA;
+}
+
+.focused .movie-icon {
+  border: 9px solid #1A9DBA;
+}
+
+.focused .actor-icon {
+  border: 5px solid #1A9DBA;
+}

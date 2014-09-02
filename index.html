@@ -1,0 +1,60 @@
+<html ng-app="terminator">
+  <head>
+    <title>Terminator Movies</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  
+  <body ng-controller="MoviesController as movies">
+    <div id="topbar"></div>
+    
+    <nav id="sidebar">
+      <h1>Browse Movies</h1>
+      <ul id="movies">
+        <li class="movie" ng-repeat="movie in movies.terminatorMovies" ng-class="{ focused: movies.selectedMovie == movie }">
+          <a href ng-click="movies.selectMovie(movie)">
+            <img class="movie-icon" ng-src="http://image.tmdb.org/t/p/w500{{ movie.poster_path }}">
+            <h2>{{ movie.title }}</h2>
+            <p>{{ movie.director.name }}</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    
+    <section id="main">
+      <section id="blurb" class="clearfix">
+        <h1>{{ movies.selectedMovie.title }}</h1>
+        <img ng-src="http://image.tmdb.org/t/p/w500{{ movies.selectedMovie.poster_path }}">
+        <h2>Who made it?</h2>
+        <p><span>Director:</span> {{ movies.selectedMovie.director.name }}</p>
+        <p>
+          <span>Writers:</span>
+          <span ng-repeat="writer in movies.selectedMovie.writers">{{ writer.name }}, </span>
+        </p>
+        <p>
+          <span>Stars:</span>
+          <span ng-repeat="star in movies.selectedMovie.stars">{{ star.name }}, </span>
+        </p>
+        <h2>What's it about?</h2>
+        <p>{{ movies.selectedMovie.details.overview }}</p>
+      </section>
+      <section>
+        <h1>Movie Credits</h1>
+        <ul id="stars">
+          <li class="star clearfix" ng-repeat="star in movies.selectedMovie.stars" ng-class="{ focused: movies.selectedActor === star }">
+            <a ng-click="movies.selectActor(star)">
+              <img class="actor-icon" ng-src="http://image.tmdb.org/t/p/w500{{ star.profile_path }}">
+              <h2>{{ star.name }}</h2>
+              <p>{{ star.character}}</p>
+            </a>
+          </li>
+        </ul>
+        <img class="profile-shot" ng-src="http://image.tmdb.org/t/p/w500{{ movies.selectedActor.profile_path }}">
+      </section>
+    </section>
+    
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-resource.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
