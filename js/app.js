@@ -2,8 +2,7 @@
   'use strict';
   var secret = "c574e44dc392b1ae91bba13815f59b3f";
   var app = angular.module('terminator', ['ngResource']);
-  
-  app.controller('MoviesController', function($scope, $resource) {
+  app.controller('MoviesController', function($scope, $resource) { 
     var self = this;
     
     self.selectMovie = function(movie) {
@@ -38,11 +37,13 @@
       function(value, responseHeaders) {
         self.terminatorMovies = value.parts;
         self.terminatorMovies.forEach( function(movie, index) {
+          
           movieDetail.get( 
             { movie_id: movie.id },
             function(value, responseHeaders) {
               movie.details = value;
           });
+          
           movieCredit.get(
             { movie_id: movie.id },
             function(value, responseHeaders) {

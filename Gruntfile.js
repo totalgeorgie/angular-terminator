@@ -26,11 +26,16 @@ module.exports = function(grunt) {
           'css/style.css': 'css/style.scss'
         }
       }
+    },
+    
+    ngdoc: {
+      all: ['js/app.js']
     }
   });
 
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-http-server');
+  grunt.loadNpmTasks('grunt-ngdoc');
   
   grunt.registerTask('default', ['sass', 'http-server:dev']);
 
