@@ -1,3 +1,17 @@
+/**
+ * @ngdoc module
+ * @name angular-terminator
+ * @module terminator
+ * @description
+ * # angular-terminator (core module)
+ * The angular-terminator module is loaded at the root of the index page for
+ * this sample application. The module should add interactive movie selection
+ * and actor selection to the index page by querying the TMDB API for the
+ * Terminator collection of movies.
+ * <div doc-module-components="angular-terminator"></div>
+ * 
+ */
+
 (function() {
   'use strict';
   var secret = "c574e44dc392b1ae91bba13815f59b3f";
