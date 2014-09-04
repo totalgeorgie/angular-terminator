@@ -1,0 +1,31 @@
+{
+  "name": "angular-terminator",
+  "version": "1.0.0",
+  "description": "George Ashworth example angular project for Elementum",
+  "main": "js/app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "karma": "^0.12.23",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-jasmine": "^0.1.5"
+  },
+  "devDependencies": {
+    "grunt-sass": "^0.14.1"
+  },
+  "scripts": {
+    "test": "karma test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/totalgeorgie/angular-terminator.git"
+  },
+  "author": "George Ashworth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/totalgeorgie/angular-terminator/issues"
+  },
+  "homepage": "https://github.com/totalgeorgie/angular-terminator"
+}
