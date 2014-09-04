@@ -13,10 +13,11 @@
     "karma-jasmine": "^0.1.5"
   },
   "devDependencies": {
+    "grunt-http-server": "0.0.5",
     "grunt-sass": "^0.14.1"
   },
   "scripts": {
-    "test": "karma test"
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
