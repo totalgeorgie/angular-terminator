@@ -4,5 +4,5 @@ Angular Terminator is an angular app to query the TMDB API for the Terminator co
 
 #TODO
 
-Learn to write ngDoc format
+Learn to write ngDoc format  
 Rewrite controller to use the $scope so I can write unit tests
